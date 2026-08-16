@@ -3,44 +3,304 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kenway Demo</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #f0f4ff, #e8fff5);
-        color: #1f2937;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-      }
-
-      .card {
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 16px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        padding: 40px 50px;
-        text-align: center;
-        max-width: 480px;
-      }
-
-      h1 {
-        margin: 0 0 12px;
-        font-size: 2.3rem;
-      }
-
-      p {
-        margin: 0;
-        font-size: 1.1rem;
-        line-height: 1.7;
-      }
-    </style>
+    <title>Kenway | 智能数字体验</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              soft: '0 20px 50px rgba(15, 23, 42, 0.12)',
+            },
+            colors: {
+              brand: {
+                50: '#eef8ff',
+                100: '#d9f1ff',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+              },
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <div class="card">
-      <h1>Hello, Kenway!</h1>
-      <p>这是一个简单的网页示例，已经成功创建并准备提交到 GitHub。</p>
-    </div>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <header class="bg-white/80 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-cyan-400 flex items-center justify-center text-white font-bold shadow-soft">
+              K
+            </div>
+            <div>
+              <div class="text-xl font-extrabold tracking-tight">Kenway</div>
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+            <a href="#features" class="hover:text-slate-900 transition">功能</a>
+            <a href="#solutions" class="hover:text-slate-900 transition">方案</a>
+            <a href="#pricing" class="hover:text-slate-900 transition">价格</a>
+            <a href="#about" class="hover:text-slate-900 transition">关于</a>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button class="hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition">
+              登录
+            </button>
+            <button class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-slate-200 transition hover:bg-slate-800">
+              免费试用
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.15),transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(16,185,129,0.15),transparent_30%)]"></div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="inline-flex items-center rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-sm font-medium text-brand-700 mb-6">
+                面向未来的数字化平台
+              </div>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-tight">
+                用更智能的方式
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-cyan-500">提升业务增长</span>
+              </h1>
+              <p class="mt-6 text-lg text-slate-600 max-w-xl">
+                Kenway 帮助团队连接数据、自动化流程与优化决策，快速实现从创意到增长的闭环，让每一次迭代都更高效。
+              </p>
+
+              <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                <button class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-brand-200 hover:bg-brand-500 transition">
+                  立即开始
+                </button>
+                <button class="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-6 py-3.5 text-base font-semibold text-slate-700 hover:border-slate-300 hover:bg-slate-50 transition">
+                  查看案例
+                </button>
+              </div>
+
+              <div class="mt-10 flex flex-wrap items-center gap-10 text-sm text-slate-500">
+                <div>
+                  <div class="text-2xl font-black text-slate-900">2.5k+</div>
+                  <div>企业客户</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-black text-slate-900">98%</div>
+                  <div>满意度</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-black text-slate-900">24/7</div>
+                  <div>实时支持</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute -inset-4 bg-gradient-to-tr from-brand-200/60 via-cyan-200/60 to-emerald-200/60 blur-2xl rounded-[2rem]"></div>
+              <div class="relative bg-white rounded-[2rem] shadow-soft border border-slate-200 p-5">
+                <div class="rounded-[1.5rem] bg-slate-900 p-5 text-white">
+                  <div class="flex items-center justify-between pb-4 border-b border-slate-700">
+                    <div>
+                      <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Revenue</p>
+                      <h2 class="mt-2 text-3xl font-bold">$248.6K</h2>
+                    </div>
+                    <div class="rounded-xl bg-emerald-500/20 text-emerald-300 px-2 py-1 text-xs font-medium">
+                      +28.4%
+                    </div>
+                  </div>
+
+                  <div class="mt-6 space-y-4">
+                    <div class="flex items-end justify-between">
+                      <div>
+                        <p class="text-sm text-slate-400">本月增长</p>
+                        <p class="text-xl font-semibold mt-1">12.8%</p>
+                      </div>
+                      <div class="w-32 h-20 rounded-xl bg-gradient-to-t from-brand-500 to-cyan-400 relative overflow-hidden">
+                        <div class="absolute inset-x-3 bottom-0 rounded-t-xl bg-white/20" style="height: 45%;"></div>
+                        <div class="absolute inset-x-3 bottom-0 rounded-t-xl bg-white/35" style="height: 70%;"></div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-3">
+                      <div class="rounded-2xl bg-slate-800 p-3">
+                        <p class="text-xs text-slate-400">转化率</p>
+                        <p class="mt-2 text-lg font-bold">7.4%</p>
+                      </div>
+                      <div class="rounded-2xl bg-slate-800 p-3">
+                        <p class="text-xs text-slate-400">新增用户</p>
+                        <p class="mt-2 text-lg font-bold">1.2k</p>
+                      </div>
+                      <div class="rounded-2xl bg-slate-800 p-3">
+                        <p class="text-xs text-slate-400">效率</p>
+                        <p class="mt-2 text-lg font-bold">3.1x</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Features</p>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-black text-slate-900">一站式能力，助力业务快速落地</h2>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+          <div class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-soft transition">
+            <div class="w-12 h-12 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 text-xl font-bold">01</div>
+            <h3 class="mt-6 text-xl font-bold text-slate-900">智能分析</h3>
+            <p class="mt-3 text-slate-600 leading-7">
+              从流量、用户和转化数据中提炼有效信号，快速定位增长机会。
+            </p>
+          </div>
+
+          <div class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-soft transition">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-xl font-bold">02</div>
+            <h3 class="mt-6 text-xl font-bold text-slate-900">自动化流程</h3>
+            <p class="mt-3 text-slate-600 leading-7">
+              统一协作工具和自动化规则，减少重复劳动，让效率持续提升。
+            </p>
+          </div>
+
+          <div class="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm hover:shadow-soft transition">
+            <div class="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center text-violet-600 text-xl font-bold">03</div>
+            <h3 class="mt-6 text-xl font-bold text-slate-900">可视化决策</h3>
+            <p class="mt-3 text-slate-600 leading-7">
+              直观的仪表盘支持实时跟踪 KPI，帮助团队在关键节点做出决定。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="solutions" class="bg-slate-900 text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">Solutions</p>
+              <h2 class="mt-4 text-3xl sm:text-4xl font-black">更快落地，更稳成长</h2>
+              <p class="mt-5 text-slate-300 leading-8">
+                我们结合行业场景与业务数据，为品牌、零售、电商和 SaaS 团队提供覆盖策略、执行和增长的解决方案。
+              </p>
+              <ul class="mt-8 space-y-4 text-slate-200">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-6 w-6 rounded-full bg-cyan-500/20 text-cyan-300 items-center justify-center text-xs font-bold">✓</span>
+                  适配不同规模团队的协作方式
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-6 w-6 rounded-full bg-cyan-500/20 text-cyan-300 items-center justify-center text-xs font-bold">✓</span>
+                  提升数据的可访问性和运营效率
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 inline-flex h-6 w-6 rounded-full bg-cyan-500/20 text-cyan-300 items-center justify-center text-xs font-bold">✓</span>
+                  以客户价值为核心的持续迭代机制
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-6 shadow-soft">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div class="rounded-2xl bg-white/5 p-5 border border-white/10">
+                  <div class="text-sm text-slate-300">客户留存</div>
+                  <div class="mt-3 text-3xl font-black text-white">91%</div>
+                  <div class="mt-2 text-xs text-emerald-300">+12% vs last month</div>
+                </div>
+                <div class="rounded-2xl bg-white/5 p-5 border border-white/10">
+                  <div class="text-sm text-slate-300">销售效率</div>
+                  <div class="mt-3 text-3xl font-black text-white">3.8x</div>
+                  <div class="mt-2 text-xs text-cyan-300">提升显著</div>
+                </div>
+                <div class="rounded-2xl bg-white/5 p-5 border border-white/10 sm:col-span-2">
+                  <div class="flex items-center justify-between">
+                    <div class="text-sm text-slate-300">执行进度</div>
+                    <div class="text-sm text-emerald-300">82%</div>
+                  </div>
+                  <div class="mt-4 h-2.5 bg-slate-700 rounded-full overflow-hidden">
+                    <div class="h-full w-[82%] rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="text-center max-w-2xl mx-auto">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">Pricing</p>
+          <h2 class="mt-4 text-3xl sm:text-4xl font-black text-slate-900">按需选择，轻松扩展</h2>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+          <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p class="text-sm font-semibold uppercase text-slate-500">Starter</p>
+            <div class="mt-5 flex items-end gap-2">
+              <span class="text-4xl font-black text-slate-900">$19</span>
+              <span class="text-slate-500">/ 月</span>
+            </div>
+            <ul class="mt-6 space-y-3 text-slate-600">
+              <li>• 基础数据看板</li>
+              <li>• 自动化流程 3 个</li>
+              <li>• 7 天邮件支持</li>
+            </ul>
+            <button class="mt-8 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-semibold text-slate-800 hover:bg-slate-100 transition">
+              立即体验
+            </button>
+          </div>
+
+          <div class="rounded-3xl border border-brand-500 bg-gradient-to-b from-brand-50 to-white p-8 shadow-soft relative">
+            <div class="absolute top-4 right-4 rounded-full bg-brand-600 px-3 py-1 text-xs font-semibold text-white">热门</div>
+            <p class="text-sm font-semibold uppercase text-brand-700">Professional</p>
+            <div class="mt-5 flex items-end gap-2">
+              <span class="text-4xl font-black text-slate-900">$49</span>
+              <span class="text-slate-500">/ 月</span>
+            </div>
+            <ul class="mt-6 space-y-3 text-slate-700">
+              <li>• 全部功能权限</li>
+              <li>• 高级分析与报表</li>
+              <li>• 24/7 优先支持</li>
+            </ul>
+            <button class="mt-8 w-full rounded-xl bg-brand-600 px-4 py-3 font-semibold text-white hover:bg-brand-500 transition">
+              选择方案
+            </button>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <p class="text-sm font-semibold uppercase text-slate-500">Enterprise</p>
+            <div class="mt-5 flex items-end gap-2">
+              <span class="text-4xl font-black text-slate-900">Custom</span>
+            </div>
+            <ul class="mt-6 space-y-3 text-slate-600">
+              <li>• 定制化开发</li>
+              <li>• 私有部署支持</li>
+              <li>• 专属技术顾问</li>
+            </ul>
+            <button class="mt-8 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 font-semibold text-slate-800 hover:bg-slate-100 transition">
+              联系我们
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="about" class="border-t border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div class="font-bold text-slate-800">Kenway</div>
+        <div>© 2026 Kenway. 所有权利保留。</div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-800">隐私政策</a>
+          <a href="#" class="hover:text-slate-800">服务条款</a>
+          <a href="#" class="hover:text-slate-800">联系</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
