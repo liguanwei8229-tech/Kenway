@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI 选题雷达 —— 自动收集全球 72 小时 AI 情报，按曝光、讨论、前沿、落地、岗位五类筛选选题方向">
+<title>📡 AI 选题雷达 · 72 小时全球 AI 情报</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%A1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">📡</span>
+    <div>
+      <h1>AI 选题雷达</h1>
+      <p class="sub">72 小时全球 AI 情报 · 选题灵感引擎</p>
+    </div>
+  </div>
+  <div class="actions">
+    <span id="updateTime" class="meta">加载中…</span>
+    <button id="refreshBtn" class="btn" title="立即重新采集全部信源">🔄 立即刷新</button>
+    <a id="reportBtn" class="btn btn-primary" href="/api/report.html" download title="下载 HTML 选题报告">📄 下载报告</a>
+    <a id="reportMdBtn" class="btn btn-ghost" href="/api/report.md" download title="下载 Markdown 报告">MD</a>
+  </div>
+</header>
+
+<section class="stats" id="statsBar"></section>
+
+<nav class="tabs" id="tabs" aria-label="分类切换"></nav>
+
+<div class="toolbar">
+  <input id="search" type="search" placeholder="🔍 搜索标题 / 作者 / 来源…" aria-label="搜索">
+  <label class="sort">排序
+    <select id="sortSel">
+      <option value="hot">🔥 按热度</option>
+      <option value="new">🕐 按时间</option>
+    </select>
+  </label>
+</div>
+
+<main id="list" class="cards" aria-live="polite"></main>
+
+<div id="empty" class="empty hidden">
+  <div class="spinner"></div>
+  <p id="emptyText">正在采集 72 小时全球 AI 情报，首次约需 30–90 秒…</p>
+</div>
+
+<footer>
+  <details>
+    <summary>📡 信源状态（<span id="srcOk">-</span>/<span id="srcTotal">-</span> 正常，点击展开）</summary>
+    <table id="srcTable">
+      <thead><tr><th>信源</th><th>状态</th><th>条数</th><th>耗时</th><th>说明</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </details>
+  <p class="footnote">数据为公开信源自动采集 · 72 小时时间窗口 · 内容仅供参考，引用请核对原文</p>
+</footer>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
