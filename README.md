@@ -44,6 +44,17 @@ node server.js
 
 ## 部署到服务器
 
+### Koyeb 免费云平台（推荐，海外节点 · 全信源可用 · 免信用卡）
+
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/liguanwei8229-tech/Kenway&branch=main)
+
+1. 点击上方按钮 → 用 GitHub 账号登录 Koyeb（首次需注册）
+2. 实例类型选择 **Free**，端口保持 **8787**（已由 Dockerfile 自动识别）
+3. 点击 **Deploy**，约 2 分钟完成
+4. 打开 `https://你的应用名.koyeb.app` 即可使用，28 个信源全部可连
+
+### Docker / 自建服务器
+
 ```bash
 # Docker
 docker build -t ai-topic-radar .
